@@ -5,3 +5,4 @@
 [submodule "src/wgpu/C/wgvk"]
 	path = src/wgpu/C/wgvk
 	url = git@github.com:RowDaBoat/WGVK.git
+	branch = bindless+fixes
