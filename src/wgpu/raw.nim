@@ -1874,6 +1874,10 @@ proc wgpuDeviceRelease *(device :WGPUDevice) {.importc:"wgpuDeviceRelease", cdec
 proc wgpuQueueRelease *(device :WGPUQueue) {.importc:"wgpuQueueRelease", cdecl, header:"webgpu/webgpu.h".}
 proc wgpuComputePassEncoderRelease *(rpenc :WGPUComputePassEncoder) {.importc:"wgpuComputePassEncoderRelease", cdecl, header:"webgpu/webgpu.h".}
 proc wgpuComputePipelineRelease *(pipeline :WGPUComputePipeline) {.importc:"wgpuComputePipelineRelease", cdecl, header:"webgpu/webgpu.h".}
+proc wgpuRaytracingPipelineAddRef *(pipeline :WGPURaytracingPipeline) {.importc:"wgpuRaytracingPipelineAddRef", cdecl, header:"webgpu/webgpu.h".}
+proc wgpuRaytracingPipelineRelease *(pipeline :WGPURaytracingPipeline) {.importc:"wgpuRaytracingPipelineRelease", cdecl, header:"webgpu/webgpu.h".}
+proc wgpuRayTracingShaderBindingTableAddRef *(shaderBindingTable :WGPURayTracingShaderBindingTable) {.importc:"wgpuRayTracingShaderBindingTableAddRef", cdecl, header:"webgpu/webgpu.h".}
+proc wgpuRayTracingShaderBindingTableRelease *(shaderBindingTable :WGPURayTracingShaderBindingTable) {.importc:"wgpuRayTracingShaderBindingTableRelease", cdecl, header:"webgpu/webgpu.h".}
 proc wgpuRenderPipelineRelease *(pipeline :WGPURenderPipeline) {.importc:"wgpuRenderPipelineRelease", cdecl, header:"webgpu/webgpu.h".}
 proc wgpuBufferRelease *(buffer :WGPUBuffer) {.importc:"wgpuBufferRelease", cdecl, header:"webgpu/webgpu.h".}
 proc wgpuBindGroupRelease *(bindGroup :WGPUBindGroup) {.importc:"wgpuBindGroupRelease", cdecl, header:"webgpu/webgpu.h".}
