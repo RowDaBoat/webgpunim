@@ -1517,6 +1517,7 @@ proc set *(cpe :ComputePassEncoder; groupIndex :uint32; group :BindGroup; dynami
 proc set *(cpe :RaytracingPassEncoder; raytracingPipeline :RaytracingPipeline) {.importc:"wgpuRaytracingPassEncoderSetPipeline", cdecl, header:"webgpu/webgpu.h".}
 proc set *(cpe :RaytracingPassEncoder; groupIndex :uint32; bindGroup :BindGroup; dynamicOffsetCount :uint32; dynamicOffsets :ptr uint32) {.importc:"wgpuRaytracingPassEncoderSetBindGroup", cdecl, header:"webgpu/webgpu.h".}
 proc trace *(cpe :RaytracingPassEncoder; rayGenerationOffset :uint32; rayHitOffset :uint32; rayMissOffset :uint32; width :uint32; height :uint32; depth :uint32) {.importc:"wgpuRaytracingPassEncoderTraceRays", cdecl, header:"webgpu/webgpu.h".}
+proc traceIndirect *(cpe :RaytracingPassEncoder; rayGenerationOffset :uint32; rayHitOffset :uint32; rayMissOffset :uint32; indirectBuffer :Buffer; indirectOffset :uint64) {.importc:"wgpuRaytracingPassEncoderTraceRaysIndirect", cdecl, header:"webgpu/webgpu.h".}
 proc dispatchWorkgroups *(cpe :ComputePassEncoder; x :uint32; y :uint32; z :uint32) {.importc:"wgpuComputePassEncoderDispatchWorkgroups", cdecl, header:"webgpu/webgpu.h".}
 proc getCurrentTexture *(surface :Surface; surfaceTexture :ptr SurfaceTexture) {.importc:"wgpuSurfaceGetCurrentTexture", cdecl, header:"webgpu/webgpu.h".}
 proc present *(surface :Surface) :Status {.importc:"wgpuSurfacePresent", cdecl, header:"webgpu/webgpu.h".}

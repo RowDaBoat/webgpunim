@@ -12,7 +12,7 @@ from ../api as wgpu import nil
 # https://github.com/PMunch/futhark/issues/144
 #_____________________________
 # Buffer Flags
-type BufferUsage *{.pure, size:sizeof(cuint).}= enum MapRead, MapWrite, CopySrc, CopyDst, Index, Vertex, Uniform, Storage, Indirect, QueryResolve
+type BufferUsage *{.pure, size:sizeof(cuint).}= enum MapRead, MapWrite, CopySrc, CopyDst, Index, Vertex, Uniform, Storage, Indirect, QueryResolve, ShaderDeviceAddress = 28
 type BufferUsageFlags * = set[types.BufferUsage]
 template None *(_:typedesc[types.BufferUsage] | typedesc[wgpu.BufferUsage]) :BufferUsageFlags= {}
 converter toWGPU *(val :BufferUsageFlags) :wgpu.BufferUsage= cast[wgpu.BufferUsage](val)
