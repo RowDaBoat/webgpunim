@@ -5,7 +5,7 @@ when not defined(nimscript):  import system/nimscript  # Silence nimsuggest erro
 import std/[ os, strformat, strutils, sequtils, algorithm ]
 # Package
 packageName   = "webgpunim"
-version       = "25.0.0.0"
+version       = "25.0.0.1"
 author        = "heysokam, RowDaBoat"
 description   = "WebGPU bindings for Nim using wgvk as backend."
 license       = "MIT"
