@@ -17,7 +17,6 @@ when defined(wasm):
 #_____________________________
 # Default flags
 when not defined(wasm):
-  {.passL:"-lvulkan".}
   {.passC:"-I"&includeDir.}
 when defined(vcc):
   {.passC: "/std:c11 /experimental:c11atomics".}
